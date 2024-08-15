@@ -1,8 +1,14 @@
 from rest_framework import serializers
-from .models import Task
+from .models import Child, Task
+
+class ChildSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Child
+        fields = ['id', 'name', 'streak']  
+        #read_only_fields = ['streak']
 
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
-        fields = ['id', 'description', 'creation_date', 'completed']
-        read_only_fields=['creation_date']
+        fields = ['id', 'child', 'description', 'completed']
+
