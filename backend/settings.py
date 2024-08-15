@@ -83,8 +83,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'kidtasks_db',
         'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
+        'PASSWORD': 'Atlaspassdb',
+        'HOST': 'atlasgym.c9mgauioylgv.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
